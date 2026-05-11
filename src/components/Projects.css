@@ -1,0 +1,145 @@
+.projects {
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.projects__orb {
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+  right: -100px; top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+/* Project Card */
+.project-card { height: 100%; }
+
+.project-card__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.project-card__inner:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+}
+
+.project-card__stripe {
+  height: 4px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.project-card__content {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card__icon { font-size: 2rem; }
+
+.project-card__links { display: flex; gap: 10px; }
+
+.project-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.project-card__link:hover {
+  background: rgba(124,58,237,0.2);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.project-card__title-wrap { display: flex; flex-direction: column; gap: 4px; }
+
+.project-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-card__badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+/* Featured card gets an extra glowing border */
+.project-card--featured .project-card__inner {
+  border-color: rgba(161, 140, 209, 0.4);
+  box-shadow: 0 0 20px rgba(161, 140, 209, 0.15);
+}
+
+.project-card--featured .project-card__inner:hover {
+  border-color: rgba(161, 140, 209, 0.7);
+  box-shadow: 0 20px 60px rgba(161, 140, 209, 0.3);
+}
+
+.project-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.project-card__subtitle {
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--color-secondary);
+}
+
+.project-card__desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+/* GitHub CTA */
+.projects__github-cta {
+  display: flex;
+  justify-content: center;
+}

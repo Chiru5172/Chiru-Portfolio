@@ -1,0 +1,113 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-glass);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__glow {
+  position: absolute;
+  width: 600px; height: 200px;
+  background: radial-gradient(ellipse, rgba(124,58,237,0.12) 0%, transparent 70%);
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px 24px 32px;
+  flex-wrap: wrap;
+}
+
+.footer__brand { display: flex; flex-direction: column; gap: 8px; }
+
+.footer__logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer__logo-bracket { color: var(--color-primary); }
+
+.footer__tagline {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: center;
+}
+
+.footer__nav-link {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.footer__nav-link:hover { color: var(--color-secondary); }
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer__social:hover {
+  background: rgba(124,58,237,0.15);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footer__bottom p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__heart {
+  color: var(--color-pink);
+  font-size: 0.85rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 700px) {
+  .footer__inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer__tagline { text-align: center; max-width: 100%; }
+}

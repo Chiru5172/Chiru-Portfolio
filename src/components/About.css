@@ -1,0 +1,208 @@
+.about { background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); }
+
+.about__orb {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+  right: -200px; top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Info Card */
+.about__info-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__objective-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about__objective {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.about__contact-icon {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.about__contact-item a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.about__contact-item a:hover { color: var(--color-secondary); }
+
+.about__status-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.about__chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+}
+
+.about__chip--green {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.about__chip--blue {
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--color-secondary);
+}
+
+.about__chip-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.about__currently { display: flex; flex-direction: column; gap: 10px; }
+.about__currently-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.about__currently-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Education Timeline */
+.about__edu-wrap { display: flex; flex-direction: column; gap: 16px; }
+.about__edu-heading { margin-bottom: 8px; }
+
+.about__timeline { display: flex; flex-direction: column; gap: 0; }
+
+.about__timeline-item {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.about__timeline-item:last-child { padding-bottom: 0; }
+
+.about__timeline-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.about__timeline-line {
+  position: absolute;
+  left: 22px;
+  top: 44px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(124,58,237,0.4) 0%, transparent 100%);
+}
+
+.about__timeline-item:last-child .about__timeline-line { display: none; }
+
+.about__timeline-card {
+  flex: 1;
+  padding: 20px 24px;
+}
+
+.about__timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.about__timeline-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+  background: rgba(34,211,238,0.1);
+  border: 1px solid rgba(34,211,238,0.25);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+
+.about__timeline-degree {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.about__timeline-institution {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.about__timeline-score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .about__grid { grid-template-columns: 1fr; }
+}

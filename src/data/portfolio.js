@@ -10,7 +10,7 @@ export const personal = {
   phone: "9652334163",
   email: "g.chirudeepreddy@gmail.com",
   github: "https://github.com/Chiru5172",
-  linkedin: "https://www.linkedin.com/in/gujjula-chirudeep-reddy-b4606527b",
+  linkedin: "https://www.linkedin.com/in/gujjula-chirudeep-reddy",
   portfolio: "https://chiru5172.github.io/Portfolio/",
   objective:
     "I am seeking opportunities to join a company that can help me in enhancing and applying my skills, strengthening my knowledge, and realizing my potential while I contribute to the growth of the company as well as engage in opportunities to further the company's goals.",

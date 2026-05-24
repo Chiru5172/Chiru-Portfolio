@@ -100,7 +100,7 @@ export default function Hero() {
               </button>
             </Link>
             <a
-              href="https://drive.google.com/file/d/17MJF0G2_8AVye8ujXlpXgPCkTKZaTG0J/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1AvqzOah_i4Jm9JVYMcu8tuEraim3x_GC/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="btn btn-outline btn-resume"
